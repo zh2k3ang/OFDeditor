@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1023</width>
+    <height>490</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/resources/OFDeditor.ico</normaloff>:/resources/OFDeditor.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1023</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>开始</string>
+    </property>
+    <addaction name="action_new"/>
+    <addaction name="action_open_ofdx"/>
+    <addaction name="action_saveAs"/>
+    <addaction name="action_saveAsEdit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>编辑管理</string>
+    </property>
+    <addaction name="action_undo"/>
+    <addaction name="action_redo"/>
+    <addaction name="action_enlarge"/>
+    <addaction name="action_shrink"/>
+    <addaction name="action_formatPainter"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>页面管理</string>
+    </property>
+    <addaction name="action_newPage"/>
+    <addaction name="action_deletePage"/>
+    <addaction name="action_pageMargin"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>版面管理</string>
+    </property>
+    <widget class="QMenu" name="menu_5">
+     <property name="title">
+      <string>字体</string>
+     </property>
+     <addaction name="action_bold"/>
+     <addaction name="action_italic"/>
+     <addaction name="action_underline"/>
+     <addaction name="action_color"/>
+    </widget>
+    <widget class="QMenu" name="menu_6">
+     <property name="title">
+      <string>段落</string>
+     </property>
+     <addaction name="action_left"/>
+     <addaction name="action_right"/>
+     <addaction name="action_center"/>
+     <addaction name="action_lineDistance"/>
+    </widget>
+    <addaction name="menu_6"/>
+    <addaction name="menu_5"/>
+   </widget>
+   <widget class="QMenu" name="menu_7">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="action_version"/>
+    <addaction name="action_introduce"/>
+    <addaction name="action_document"/>
+   </widget>
+   <widget class="QMenu" name="menu_8">
+    <property name="title">
+     <string>插入管理</string>
+    </property>
+    <addaction name="action_insertImage"/>
+    <addaction name="action_table"/>
+   </widget>
+   <widget class="QMenu" name="menu_9">
+    <property name="title">
+     <string>审阅</string>
+    </property>
+    <addaction name="action_count"/>
+    <addaction name="action_preview"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_8"/>
+   <addaction name="menu_9"/>
+   <addaction name="menu_7"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_undo"/>
+   <addaction name="action_redo"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_3">
+   <property name="windowTitle">
+    <string>toolBar_3</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_new"/>
+   <addaction name="action_open_ofdx"/>
+   <addaction name="action_saveAsEdit"/>
+   <addaction name="action_saveAs"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_4">
+   <property name="windowTitle">
+    <string>toolBar_4</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_newPage"/>
+   <addaction name="action_deletePage"/>
+   <addaction name="action_pageMargin"/>
+   <addaction name="action_pageDirection"/>
+   <addaction name="action_lineDistance"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_5">
+   <property name="windowTitle">
+    <string>toolBar_5</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_formatPainter"/>
+   <addaction name="action_color"/>
+   <addaction name="action_bold"/>
+   <addaction name="action_italic"/>
+   <addaction name="action_underline"/>
+   <addaction name="action_left"/>
+   <addaction name="action_right"/>
+   <addaction name="action_center"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_6">
+   <property name="windowTitle">
+    <string>toolBar_6</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_insertImage"/>
+   <addaction name="action_table"/>
+  </widget>
+  <action name="action_saveAs">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/f17.png</normaloff>:/resources/f17.png</iconset>
+   </property>
+   <property name="text">
+    <string>另存为</string>
+   </property>
+  </action>
+  <action name="action_undo">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/undo.png</normaloff>:/resources/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>撤销</string>
+   </property>
+  </action>
+  <action name="action_redo">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/redo.png</normaloff>:/resources/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>重做</string>
+   </property>
+  </action>
+  <action name="action_newPage">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/add_page.png</normaloff>:/resources/add_page.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加页面</string>
+   </property>
+  </action>
+  <action name="action_pageDirection">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/39.png</normaloff>:/resources/39.png</iconset>
+   </property>
+   <property name="text">
+    <string>纸张方向</string>
+   </property>
+  </action>
+  <action name="action_pageMargin">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/document-page-setup.png</normaloff>:/resources/document-page-setup.png</iconset>
+   </property>
+   <property name="text">
+    <string>页边距</string>
+   </property>
+  </action>
+  <action name="action_bold">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/font8.png</normaloff>:/resources/font8.png</iconset>
+   </property>
+   <property name="text">
+    <string>加粗</string>
+   </property>
+  </action>
+  <action name="action_italic">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/italic4.png</normaloff>:/resources/italic4.png</iconset>
+   </property>
+   <property name="text">
+    <string>倾斜</string>
+   </property>
+  </action>
+  <action name="action_underline">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/underline.png</normaloff>:/resources/underline.png</iconset>
+   </property>
+   <property name="text">
+    <string>下划线</string>
+   </property>
+  </action>
+  <action name="action_left">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/left59.png</normaloff>:/resources/left59.png</iconset>
+   </property>
+   <property name="text">
+    <string>左对齐</string>
+   </property>
+  </action>
+  <action name="action_right">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/right.png</normaloff>:/resources/right.png</iconset>
+   </property>
+   <property name="text">
+    <string>右对齐</string>
+   </property>
+  </action>
+  <action name="action_center">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/center7.png</normaloff>:/resources/center7.png</iconset>
+   </property>
+   <property name="text">
+    <string>居中</string>
+   </property>
+  </action>
+  <action name="action_version">
+   <property name="text">
+    <string>版本</string>
+   </property>
+  </action>
+  <action name="action_introduce">
+   <property name="text">
+    <string>介绍</string>
+   </property>
+  </action>
+  <action name="action_document">
+   <property name="text">
+    <string>文档</string>
+   </property>
+  </action>
+  <action name="action_deletePage">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/delete_page.png</normaloff>:/resources/delete_page.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除页面</string>
+   </property>
+  </action>
+  <action name="action_insertImage">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/insert-image.png</normaloff>:/resources/insert-image.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加图像</string>
+   </property>
+   <property name="toolTip">
+    <string>添加图像</string>
+   </property>
+  </action>
+  <action name="action_color">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/color_swatch.png</normaloff>:/resources/color_swatch.png</iconset>
+   </property>
+   <property name="text">
+    <string>颜色</string>
+   </property>
+  </action>
+  <action name="action_lineDistance">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/line_spacing.png</normaloff>:/resources/line_spacing.png</iconset>
+   </property>
+   <property name="text">
+    <string>行距</string>
+   </property>
+  </action>
+  <action name="action_table">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/tables.png</normaloff>:/resources/tables.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加表格</string>
+   </property>
+   <property name="toolTip">
+    <string>添加表格</string>
+   </property>
+  </action>
+  <action name="action_saveAsEdit">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/filesaveas.png</normaloff>:/resources/filesaveas.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="action_open_ofdx">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/ofdx.png</normaloff>:/resources/ofdx.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="action_new">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/new.png</normaloff>:/resources/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建</string>
+   </property>
+  </action>
+  <action name="action_enlarge">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/enlarge.png</normaloff>:/resources/enlarge.png</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+  </action>
+  <action name="action_shrink">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/shrink.png</normaloff>:/resources/shrink.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+  </action>
+  <action name="action_formatPainter">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/formatPainter.png</normaloff>:/resources/formatPainter.png</iconset>
+   </property>
+   <property name="text">
+    <string>格式刷</string>
+   </property>
+  </action>
+  <action name="action_count">
+   <property name="text">
+    <string>字数统计</string>
+   </property>
+  </action>
+  <action name="action_preview">
+   <property name="text">
+    <string>预览</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/39.png</file>
+        <file>resources/add_page.png</file>
+        <file>resources/center7.png</file>
+        <file>resources/delete_page.png</file>
+        <file>resources/document-page-setup.png</file>
+        <file>resources/font8.png</file>
+        <file>resources/insert-image.png</file>
+        <file>resources/italic4.png</file>
+        <file>resources/left59.png</file>
+        <file>resources/right.png</file>
+        <file>resources/underline.png</file>
+        <file>resources/f17.png</file>
+        <file>resources/color_swatch.png</file>
+        <file>resources/line_spacing.png</file>
+        <file>resources/redo.png</file>
+        <file>resources/undo.png</file>
+        <file>resources/tables.png</file>
+        <file>resources/color.png</file>
+        <file>resources/text-color.png</file>
+        <file>resources/filesaveas.png</file>
+        <file>resources/document-save-as.png</file>
+        <file>resources/ofdx.png</file>
+        <file>resources/new.png</file>
+        <file>resources/enlarge.png</file>
+        <file>resources/shrink.png</file>
+        <file>resources/OFDeditor.ico</file>
+        <file>resources/formatPainter.png</file>
+        <file>resources/format_mouse.png</file>
+    </qresource>
+</RCC>
